@@ -1,18 +1,19 @@
 import { ReactNode } from "react";
 import { AppBody } from "../src/layout/styles";
 import "../src/styles/main.scss";
-import { Inter } from "@next/font/google";
+import { Nunito } from "@next/font/google";
 
-const inter = Inter({ 
+const nunito = Nunito({ 
   subsets: ["latin"],
-  variable: "--inter-font"
+  weight: ["400", "800"],
+  variable: "--nunito-font"
 });
 
 export default function AppLayout({ children }: {
   children: ReactNode
 }) {
   return (
-    <html className={inter.variable} lang="en">
+    <html className={nunito.variable} lang="en">
       <AppBody>
         {children}
       </AppBody>
