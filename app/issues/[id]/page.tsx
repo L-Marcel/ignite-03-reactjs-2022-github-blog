@@ -1,6 +1,6 @@
 import { redirect } from "next/navigation";
 import { api } from "../../../src/services/axios";
-import { IssueData, IssueDataResponse } from "../../page";
+import { IssueData, IssueDataResponse, getIssues } from "../../page";
 import { IssuePageContainer } from "../../../src/styles/pages/issueStyles";
 import { IssueCard } from "../../../src/components/IssueCard";
 
@@ -42,6 +42,14 @@ async function getIssueById(id: number): Promise<IssueData> {
         url: issue.html_url
       } as IssueData;
     });
+}
+
+export async function generateStaticParams() {
+  const issues = await getIssues();
+
+  return issues.map((issue) => ({
+    id: issue.id,
+  }));
 }
 
 export default async function IssuePage({

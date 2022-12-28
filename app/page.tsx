@@ -52,7 +52,7 @@ async function getProfile(): Promise<ProfileData> {
     } as ProfileData));
 }
 
-async function getIssues(): Promise<IssueData[]> {
+export async function getIssues(): Promise<IssueData[]> {
   const repository = "L-Marcel/ignite-03-reactjs-2022-github-blog";
 
   return await api.get<IssueDataResponse>(`search/issues?q=repo:${repository}`)
