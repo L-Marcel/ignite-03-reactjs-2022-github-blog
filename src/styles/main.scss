@@ -51,6 +51,154 @@
       }
     }
   }
+
+  .markdown {
+    @apply
+      flex
+      flex-col
+      gap-4;
+
+    img {
+      @apply
+        rounded-md;
+    }
+
+    a {
+      @apply
+        normal-case
+        text-base-subtitle
+        rounded-md
+        italic
+        text-base
+        font-normal
+        underline
+        underline-offset-1
+        whitespace-normal
+        break-words
+        max-w-full
+        hover:underline-offset-2
+        hover:text-blue
+        gap-2
+        mb-1;
+
+      &:not(:has(+ img)) {
+        @apply
+          focus-visible:px-2
+          focus:px-2;
+      };
+
+      img {
+        @apply
+          w-min;
+      }
+    }
+
+    p {
+      @apply
+        text-base
+        text-base-text;
+    }
+
+    h1, h2, h3, h4 {
+      @apply
+        font-normal
+        text-base
+        text-blue;
+    }
+
+    h1 {
+      @apply
+        text-2xl
+        font-bold;
+    }
+
+    h2 {
+      @apply
+        font-bold
+        text-xl;
+    }
+
+    h3 {
+      @apply
+        text-lg;
+    }
+
+    ul {
+      @apply
+        list-disc
+        w-full
+        ml-4;
+    }
+
+    p {
+      a {
+        @apply
+          inline;
+      }
+    }
+
+    pre {
+      @apply
+        bg-base-post
+        p-4
+        w-full
+        overflow-x-auto
+        rounded-md
+        scrollbar-thin
+        scrollbar-thumb-base-border
+        scrollbar-track-base-profile;
+    }
+
+    #repository-buttons {
+      @apply
+        flex
+        flex-row
+        gap-3;
+    }
+
+    #grid-item {
+      @apply
+        flex
+        flex-col
+        gap-2
+        mb-2;
+    }
+
+    div:not(.markdown) > a {
+      @apply
+        inline;
+    }
+
+    #statistics {
+      @apply
+        flex
+        flex-col
+        items-center
+        gap-2
+        mb-2;
+
+      & > div {
+        @apply
+          flex
+          gap-3;
+      }
+    }
+
+    *:focus, *:focus-visible {
+      @apply
+        outline-none
+        shadow-none
+        ring-2
+        ring-offset-2
+        ring-base-span
+        ring-offset-base-background;
+    }
+
+    .disabled {
+      @apply
+        hidden #{!important};
+    }
+  }
 }
 
 @layer base {

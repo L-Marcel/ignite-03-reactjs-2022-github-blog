@@ -11,7 +11,7 @@ interface IssueCardProps {
 export function IssueCard({ 
   issue
 }: IssueCardProps) {
-  const { title, comments, createdAt, author, url, body } = issue;
+  const { title, comments, createdAt, author, url } = issue;
 
   const time = formatDistance(new Date(createdAt), new Date(), {
     locale: ptBrLocale

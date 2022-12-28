@@ -3,6 +3,7 @@ import { api } from "../../../src/services/axios";
 import { IssueData, IssueDataResponse, getIssues } from "../../page";
 import { IssuePageContainer } from "../../../src/styles/pages/issueStyles";
 import { IssueCard } from "../../../src/components/IssueCard";
+import { IssueMarkdown } from "../../../src/components/IssueMarkdown";
 
 interface IssuePageProps {
   params: {
@@ -48,7 +49,7 @@ export async function generateStaticParams() {
   const issues = await getIssues();
 
   return issues.map((issue) => ({
-    id: issue.id,
+    id: String(issue.id),
   }));
 }
 
@@ -64,6 +65,7 @@ export default async function IssuePage({
   return (
     <IssuePageContainer>
       <IssueCard issue={issue}/>
+      <IssueMarkdown data={issue.body}/>
     </IssuePageContainer>
   );
 }
