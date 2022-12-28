@@ -38,6 +38,8 @@ export const IssueListItemHeader = tw.header`
 `;
 
 export const IssueListItemTime = tw.time`
+  hidden
+  md:block
   text-base-span
   font-normal
   text-sm
