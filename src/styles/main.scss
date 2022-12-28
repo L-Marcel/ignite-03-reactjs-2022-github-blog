@@ -2,10 +2,104 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .issue-info-list {
+    @apply
+      flex
+      gap-6;
+
+    li {
+      @apply
+        flex
+        gap-2;
+
+      svg {
+        @apply
+          text-base-label
+          w-5
+          h-5;
+      }
+      
+      p {
+        @apply
+          text-base-subtitle;
+      }
+    }
+  }
+
+  .profile-info-list {
+    @apply
+      flex
+      gap-6
+      mt-6;
+
+    li {
+      @apply
+        flex
+        gap-2;
+
+      svg {
+        @apply
+          text-base-label
+          w-5
+          h-5;
+      }
+      
+      p {
+        @apply
+          text-base-subtitle;
+      }
+    }
+  }
+}
+
 @layer base {
+  *:focus, *:focus-visible {
+    @apply
+      outline-none
+      shadow-none
+      ring-2
+      ring-offset-4
+      ring-base-span
+      ring-offset-base-profile;
+  }
+
   html {
     @apply 
       font-nunito
-      font-normal;
+      font-normal
+      scrollbar-thin
+      scrollbar-thumb-base-border
+      scrollbar-track-base-profile;
+  }
+
+  body {
+    @apply
+      bg-base-background
+      text-base-text
+      text-base
+      overflow-x-hidden;
+  }
+
+  a:not(.card-link) {
+    @apply
+      font-bold
+      text-xs
+      uppercase
+      text-blue;
+  }
+
+  h1 {
+    @apply
+      font-bold
+      text-2xl
+      text-base-title;
+  }
+
+  h3 {
+    @apply
+      font-bold
+      text-xl
+      text-base-title;
   }
 }

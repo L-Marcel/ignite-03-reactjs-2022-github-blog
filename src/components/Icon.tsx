@@ -1,7 +1,6 @@
 import { FaGithub, FaBuilding, FaUsers, FaCalendarDay, FaChevronLeft, FaComment } from "react-icons/fa";
 import { BsBoxArrowUpRight } from "react-icons/bs";
-import { IconType } from "react-icons/lib/esm/iconBase";
-
+import { IconBaseProps } from "react-icons/lib";
 
 const icons = {
   FaGithub,
@@ -13,7 +12,7 @@ const icons = {
   BsBoxArrowUpRight
 };
 
-interface IconProps extends IconType {
+interface IconProps extends IconBaseProps {
   name: keyof typeof icons;
 }
 

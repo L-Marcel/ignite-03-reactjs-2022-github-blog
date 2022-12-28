@@ -1,11 +1,11 @@
 import { ReactNode } from "react";
-import { AppBody } from "../src/layout/styles";
 import "../src/styles/main.scss";
 import { Nunito } from "@next/font/google";
+import { Header } from "../src/components/Header";
 
 const nunito = Nunito({ 
   subsets: ["latin"],
-  weight: ["400", "800"],
+  weight: ["400", "700"],
   variable: "--nunito-font"
 });
 
@@ -14,9 +14,10 @@ export default function AppLayout({ children }: {
 }) {
   return (
     <html className={nunito.variable} lang="en">
-      <AppBody>
+      <body>
+        <Header/>
         {children}
-      </AppBody>
+      </body>
     </html>
   );
 }
