@@ -22,7 +22,7 @@ export function ProfileCard({
   return (
     <ProfileCardContainer>
       <Image
-        className="rounded-lg"
+        className="hidden lg2:block rounded-lg"
         src={avatarUrl.toString()}
         alt=""
         width={148}

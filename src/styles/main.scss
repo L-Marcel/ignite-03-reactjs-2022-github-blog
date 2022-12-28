@@ -6,11 +6,16 @@
   .issue-info-list {
     @apply
       flex
-      gap-6;
+      flex-wrap
+      gap-2
+      md:gap-3
+      lg:gap-6
+      mt-6;
 
     li {
       @apply
         flex
+        flex-nowrap
         gap-2;
 
       svg {
@@ -30,12 +35,16 @@
   .profile-info-list {
     @apply
       flex
-      gap-6
-      mt-6;
+      gap-2
+      md:gap-3
+      lg:gap-6
+      mt-6
+      flex-wrap;
 
     li {
       @apply
         flex
+        flex-nowrap
         gap-2;
 
       svg {

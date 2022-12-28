@@ -5,7 +5,7 @@ export const ProfileCardContainer = tw.article`
   py-8
   -mt-20
   w-full
-  h-56
+  min-h-56
   rounded-lg
   flex
   gap-8
@@ -16,6 +16,7 @@ export const ProfileCardContainer = tw.article`
 
 export const ProfileCardHeader = tw.header`
   w-full
+  md:mb-3
 `;
 
 export const LinkContainer = tw.a`
@@ -29,7 +30,16 @@ export const GithubLinkContainer = tw(LinkContainer)`
   rounded-md
   top-0
   right-0
-  px-2
-  mt-10
-  mr-8
+  py-2
+  px-4
+  translate-x-4
+  -translate-y-1/2
+  lg:px-2
+  lg:py-0
+  bg-base-post
+  lg:translate-y-0
+  lg:translate-x-0
+  lg:bg-transparent
+  lg:mt-10
+  lg:mr-8
 `;

@@ -12,6 +12,9 @@ module.exports = {
       fontFamily: {
         "nunito": ["var(--nunito-font)", "sans-serif"]
       },
+      screens: {
+        lg2: "1164px"
+      },
       colors: {
         blue: "#3294f8",
         "base-title": "#e7edf4",

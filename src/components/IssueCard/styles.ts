@@ -33,7 +33,10 @@ export const ReturnLinkContainer = tw(Link)`
 export const GithubLinkContainer = tw.a`
   flex
   items-center
-  gap-2
+  flex-nowrap
+  whitespace-nowrap
+  gap-1
+  md:gap-2
   rounded-md
   px-2
   -mr-4

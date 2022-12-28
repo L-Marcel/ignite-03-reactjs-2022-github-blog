@@ -55,8 +55,7 @@ export function IssuesList({ issues }: IssuesListProps) {
         columnClassName="pl-[30px] bg-clip-padding"
         breakpointCols={{
           default: 2,
-          700: 2,
-          500: 1
+          1100: 1
         }}
       >
         {filteredIssues

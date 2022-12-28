@@ -4,6 +4,8 @@ export const IssuePageContainer = tw.main`
   flex
   flex-col
   px-11
-  md:px-60
+  md:px-36
+  lg:px-56
+  lg2:px-60
   w-full
 `;
