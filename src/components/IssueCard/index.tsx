@@ -51,7 +51,7 @@ export function IssueCard({
               name="FaCalendarDay"
             />
             <time>
-              {time}
+              Há {time}
             </time>
           </li>
           <li>
