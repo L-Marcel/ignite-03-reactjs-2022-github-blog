@@ -21,6 +21,7 @@ export const SearchIssueInput = tw.input`
 export const IssueListItemContainer = tw.article`
   rounded-xl
   min-w-[250px]
+  w-full
   bg-base-post
   p-8
   flex
