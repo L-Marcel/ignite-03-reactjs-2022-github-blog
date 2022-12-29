@@ -211,6 +211,12 @@
 }
 
 @layer base {
+  :root {
+    @apply
+      text-[26px]
+      lg:text-[16px];
+  }
+
   *:focus, *:focus-visible {
     @apply
       outline-none
